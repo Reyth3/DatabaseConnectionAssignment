@@ -9,7 +9,7 @@ using TKompTask.DataAccess.Queries;
 
 namespace TKompTask.DataAccess.Handlers
 {
-    public class TestConnectionHandler : IRequestHandler<TestConnectionQuery, bool>
+    public record TestConnectionHandler : IRequestHandler<TestConnectionQuery, bool>
     {
         private readonly IDataAccessService _dataAccess;
         public TestConnectionHandler(IDataAccessService dataAccess)

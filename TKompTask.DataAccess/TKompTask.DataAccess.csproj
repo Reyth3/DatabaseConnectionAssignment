@@ -8,4 +8,8 @@
     <PackageReference Include="Mediatr" Version="9.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TKompTask.Shared\TKompTask.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

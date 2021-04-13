@@ -1,6 +1,8 @@
 ﻿using TKompTask.Client.Pages;
 using Stylet;
 using StyletIoC;
+using Stylet.Samples.ModelValidation;
+using FluentValidation;
 
 namespace TKompTask.Client
 {
@@ -8,7 +10,8 @@ namespace TKompTask.Client
     {
         protected override void ConfigureIoC(IStyletIoCBuilder builder)
         {
-            // Configure the IoC container in here
+            builder.Bind(typeof(IModelValidator<>)).To(typeof(FluentModelValidator<>));
+            builder.Bind(typeof(IValidator<>)).ToAllImplementations();
         }
 
         protected override void Configure()

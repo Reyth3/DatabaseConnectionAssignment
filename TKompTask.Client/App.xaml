@@ -21,8 +21,8 @@
                         <Setter.Value>
                             <ControlTemplate>
                                 <DockPanel LastChildFill="False">
-                                    <Grid DockPanel.Dock="Right" Margin="5,0,0,0" VerticalAlignment="Top"
-                                Width="20" Height="20" ToolTip="{Binding ElementName=CustomAdorner, Path=AdornedElement.(Validation.Errors)[0].ErrorContent}">
+                                    <Grid DockPanel.Dock="Right" Margin="-30,0,0,0" VerticalAlignment="Center"
+                                Width="12" Height="12" ToolTip="{Binding ElementName=CustomAdorner, Path=AdornedElement.(Validation.Errors)[0].ErrorContent}">
 
                                         <Ellipse Fill="DarkRed" />
                                         <TextBlock Text="!" VerticalAlignment="center" HorizontalAlignment="center" FontWeight="Bold" Foreground="white" />

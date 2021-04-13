@@ -43,7 +43,7 @@ namespace TKompTask.API
             var authSettings = new AuthSettings();
             Configuration.GetSection("AuthSettings").Bind(authSettings);
             services.AddSingleton<AuthSettings>(authSettings);
-            services.AddTransient<IDataAccessService, DataAccessService>(); // <- Tu główna implementacja DAL. Znacznie uproszczona na potrzeby zadania, ale wiadomo, o co chodzi
+            services.AddScoped<IDataAccessService, DataAccessService>(); // <- Tu główna implementacja DAL. Znacznie uproszczona na potrzeby zadania, ale wiadomo, o co chodzi
             services.AddMediatR(typeof(IDataAccessService).Assembly); // <- Wzorzec Mediator
 
             services.AddControllers(c =>
